@@ -1,8 +1,8 @@
 // What goes with this piece? Owned items, grouped by role, with reasons. Never suggests buying.
-import { handler, loadWardrobe, itemLine, cleanIds } from "./_lib/http.js";
-import { indexById, realId } from "./_lib/http.js";
-import { askJSON, httpError } from "./_lib/claude.js";
-import { STYLIST } from "./_lib/style.js";
+import { handler, loadWardrobe, itemLine, cleanIds } from "../_lib/http.js";
+import { indexById, realId } from "../_lib/http.js";
+import { askJSON, httpError } from "../_lib/claude.js";
+import { STYLIST } from "../_lib/style.js";
 
 export default handler(async ({ itemId, anchorText, anchorImage }, { db }) => {
   const items = await loadWardrobe(db);

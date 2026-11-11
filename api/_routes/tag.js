@@ -1,7 +1,7 @@
 // #2 Structured tags from a photo
-import { handler } from "./_lib/http.js";
-import { askJSON, httpError } from "./_lib/claude.js";
-import { TERMS } from "./_lib/style.js";
+import { handler } from "../_lib/http.js";
+import { askJSON, httpError } from "../_lib/claude.js";
+import { TERMS } from "../_lib/style.js";
 
 export const CATEGORIES = ["Tops","Knitwear","Shirts","Trousers","Denim","Skirts","Dresses","Outerwear","Tailoring","Shoes","Bags","Accessories"];
 

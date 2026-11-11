@@ -1,8 +1,8 @@
 // Live price search for a piece: the exact item (new and resale), plus cheaper equivalents.
-import { handler } from "./_lib/http.js";
-import { askJSON, httpError } from "./_lib/claude.js";
-import { TERMS } from "./_lib/style.js";
-import { findPricesMulti } from "./_lib/prices.js";
+import { handler } from "../_lib/http.js";
+import { askJSON, httpError } from "../_lib/claude.js";
+import { TERMS } from "../_lib/style.js";
+import { findPricesMulti } from "../_lib/prices.js";
 
 export default handler(async ({ description, price, image }) => {
   if (!description && !image) throw httpError(400, "Describe the piece or add a photo");

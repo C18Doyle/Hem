@@ -1,7 +1,7 @@
 // Check one wishlist item now (the same logic as the daily job, on demand)
-import { handler } from "./_lib/http.js";
-import { httpError } from "./_lib/claude.js";
-import { checkWishlist } from "./_lib/alerts.js";
+import { handler } from "../_lib/http.js";
+import { httpError } from "../_lib/claude.js";
+import { checkWishlist } from "../_lib/alerts.js";
 
 export default handler(async ({ id }, { db, user }) => {
   const { data: w } = await db.from("wishlist").select("*").eq("id", id).single();

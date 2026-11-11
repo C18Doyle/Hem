@@ -1,7 +1,7 @@
 // #10 Year in review: an editor's note written from the year's numbers
-import { handler } from "./_lib/http.js";
-import { askJSON, httpError } from "./_lib/claude.js";
-import { TERMS } from "./_lib/style.js";
+import { handler } from "../_lib/http.js";
+import { askJSON, httpError } from "../_lib/claude.js";
+import { TERMS } from "../_lib/style.js";
 
 export default handler(async ({ year, stats }) => {
   if (!stats) throw httpError(400, "No stats");

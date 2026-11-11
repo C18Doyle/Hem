@@ -1,8 +1,8 @@
 // #8 Suggestion for the day: weather + plans + what you've worn recently + taste
-import { handler, loadWardrobe, loadFeedback, feedbackText, itemLine, cleanIds } from "./_lib/http.js";
-import { indexById, realId } from "./_lib/http.js";
-import { askJSON, httpError } from "./_lib/claude.js";
-import { STYLIST } from "./_lib/style.js";
+import { handler, loadWardrobe, loadFeedback, feedbackText, itemLine, cleanIds } from "../_lib/http.js";
+import { indexById, realId } from "../_lib/http.js";
+import { askJSON, httpError } from "../_lib/claude.js";
+import { STYLIST } from "../_lib/style.js";
 
 export default handler(async ({ weather, plans, exclude = [] }, { db }) => {
   const items = await loadWardrobe(db);

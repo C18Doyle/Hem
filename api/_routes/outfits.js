@@ -1,8 +1,8 @@
 // #5 Outfits that learn from feedback
-import { handler, loadWardrobe, loadFeedback, feedbackText, itemLine, cleanIds } from "./_lib/http.js";
-import { indexById, realId } from "./_lib/http.js";
-import { askJSON, httpError } from "./_lib/claude.js";
-import { STYLIST } from "./_lib/style.js";
+import { handler, loadWardrobe, loadFeedback, feedbackText, itemLine, cleanIds } from "../_lib/http.js";
+import { indexById, realId } from "../_lib/http.js";
+import { askJSON, httpError } from "../_lib/claude.js";
+import { STYLIST } from "../_lib/style.js";
 
 export default handler(async ({ anchorId, anchorText, anchorImage, occasion, mix = "mine" }, { db }) => {
   const items = await loadWardrobe(db);

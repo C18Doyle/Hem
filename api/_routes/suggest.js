@@ -1,8 +1,8 @@
 // #6 Wardrobe gaps: only evidence-backed gaps. Returning none is a valid, good answer.
-import { handler, loadWardrobe, itemLine, cleanIds } from "./_lib/http.js";
-import { indexById, realId } from "./_lib/http.js";
-import { askJSON, httpError } from "./_lib/claude.js";
-import { STYLIST } from "./_lib/style.js";
+import { handler, loadWardrobe, itemLine, cleanIds } from "../_lib/http.js";
+import { indexById, realId } from "../_lib/http.js";
+import { askJSON, httpError } from "../_lib/claude.js";
+import { STYLIST } from "../_lib/style.js";
 
 export default handler(async ({ focus }, { db }) => {
   const items = await loadWardrobe(db);

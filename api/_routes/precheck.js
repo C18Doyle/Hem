@@ -1,8 +1,8 @@
 // #6 Before you buy: duplicates, outfits unlocked, projected cost per wear
-import { handler, loadWardrobe, itemLine, cleanIds } from "./_lib/http.js";
-import { indexById, realId } from "./_lib/http.js";
-import { askJSON, httpError } from "./_lib/claude.js";
-import { TERMS } from "./_lib/style.js";
+import { handler, loadWardrobe, itemLine, cleanIds } from "../_lib/http.js";
+import { indexById, realId } from "../_lib/http.js";
+import { askJSON, httpError } from "../_lib/claude.js";
+import { TERMS } from "../_lib/style.js";
 
 export default handler(async ({ description, price, image, fit }, { db }) => {
   if (!description && !image) throw httpError(400, "Describe the piece or add a photo");

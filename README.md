@@ -14,6 +14,9 @@ Stack: Vite + React, Supabase (auth, Postgres, storage), Vercel (static site, se
 
 ## Where things live
 
+All `/api/<name>` endpoints run in one serverless function, `api/[route].js`, which dispatches to `api/_routes/<name>.js`. Vercel's Hobby plan allows at most 12 functions, and this keeps the total at two (plus the daily job). Below, `api/<name>.js` means `api/_routes/<name>.js`.
+
+
 | Feature | Front end | API |
 |---|---|---|
 | Structured tags from a photo | `components/AddItem.jsx`, `ItemForm.jsx` | `api/tag.js` |

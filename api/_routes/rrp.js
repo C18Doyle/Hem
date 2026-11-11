@@ -1,6 +1,6 @@
 // Estimate what a piece costs new at full price today (UK). Cheap model, no web search.
-import { handler } from "./_lib/http.js";
-import { askJSON, httpError } from "./_lib/claude.js";
+import { handler } from "../_lib/http.js";
+import { askJSON, httpError } from "../_lib/claude.js";
 
 export default handler(async ({ name, brand, category, material }) => {
   if (!name && !brand) throw httpError(400, "Add a name or brand first");

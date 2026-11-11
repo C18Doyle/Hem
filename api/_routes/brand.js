@@ -1,8 +1,8 @@
 // Research a brand or manufacturer's sustainability from public sources, with citations.
-import { handler } from "./_lib/http.js";
-import { askJSON, httpError } from "./_lib/claude.js";
-import { brandKey } from "../src/lib/quality.js";
-import { brandRequest, saveBrand } from "./_lib/brandlib.js";
+import { handler } from "../_lib/http.js";
+import { askJSON, httpError } from "../_lib/claude.js";
+import { brandKey } from "../../src/lib/quality.js";
+import { brandRequest, saveBrand } from "../_lib/brandlib.js";
 
 const FRESH_DAYS = 180;
 

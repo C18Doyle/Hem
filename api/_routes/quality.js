@@ -1,10 +1,10 @@
 // Quality assessment: label + photos + guided inspection + price -> sub-scores.
 // Consistency measures: fixed rubric anchors, temperature 0, and a "precise" mode that
 // runs two assessments (a third if they disagree) and takes the median of each sub-score.
-import { handler } from "./_lib/http.js";
-import { askJSON, httpError } from "./_lib/claude.js";
-import { TERMS } from "./_lib/style.js";
-import { CHECKLIST, DIMENSIONS, combine } from "../src/lib/quality.js";
+import { handler } from "../_lib/http.js";
+import { askJSON, httpError } from "../_lib/claude.js";
+import { TERMS } from "../_lib/style.js";
+import { CHECKLIST, DIMENSIONS, combine } from "../../src/lib/quality.js";
 
 // What each score level looks like. Anchoring stops scores drifting between runs.
 const RUBRIC = `Scoring anchors (use these, not intuition):

@@ -1,9 +1,9 @@
 // #7 Alteration rescue: why are these pieces sitting unworn, and can a tailor fix it?
-import { handler, loadWardrobe, itemLine, indexById, realId } from "./_lib/http.js";
-import { askJSON, httpError } from "./_lib/claude.js";
-import { TERMS } from "./_lib/style.js";
-import { fitCheck, target, GROUP } from "../src/lib/fit.js";
-import { versatility } from "../src/lib/versatility.js";
+import { handler, loadWardrobe, itemLine, indexById, realId } from "../_lib/http.js";
+import { askJSON, httpError } from "../_lib/claude.js";
+import { TERMS } from "../_lib/style.js";
+import { fitCheck, target, GROUP } from "../../src/lib/fit.js";
+import { versatility } from "../../src/lib/versatility.js";
 
 export default handler(async (_, { db }) => {
   const items = await loadWardrobe(db);

@@ -16,53 +16,11 @@
     }
   ],
   "functions": {
-    "api/search.js": {
-      "maxDuration": 60
+    "api/[route].js": {
+      "maxDuration": 120
     },
     "api/cron/prices.js": {
       "maxDuration": 300
-    },
-    "api/quality.js": {
-      "maxDuration": 60
-    },
-    "api/outfits.js": {
-      "maxDuration": 60
-    },
-    "api/today.js": {
-      "maxDuration": 60
-    },
-    "api/precheck.js": {
-      "maxDuration": 60
-    },
-    "api/wishlist-check.js": {
-      "maxDuration": 60
-    },
-    "api/suggest.js": {
-      "maxDuration": 60
-    },
-    "api/news.js": {
-      "maxDuration": 30
-    },
-    "api/brand.js": {
-      "maxDuration": 120
-    },
-    "api/rescue.js": {
-      "maxDuration": 60
-    },
-    "api/pairings.js": {
-      "maxDuration": 60
-    },
-    "api/detect.js": {
-      "maxDuration": 60
-    },
-    "api/tag.js": {
-      "maxDuration": 30
-    },
-    "api/rrp.js": {
-      "maxDuration": 30
-    },
-    "api/review.js": {
-      "maxDuration": 60
     }
   }
 }

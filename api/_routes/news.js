@@ -1,6 +1,6 @@
 // #5 Fashion news: server-side RSS/Atom fetch (browsers can't read most feeds directly because of CORS)
-import { handler } from "./_lib/http.js";
-import { FEEDS, SHOPPING } from "./_lib/feeds.js";
+import { handler } from "../_lib/http.js";
+import { FEEDS, SHOPPING } from "../_lib/feeds.js";
 
 let cache = { at: 0, data: null };
 const TTL = 30 * 60e3;

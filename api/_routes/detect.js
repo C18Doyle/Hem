@@ -1,7 +1,7 @@
 // Batch entry: find each garment in one photo (a rail, a bed, a flat lay) and return crop boxes + tags.
-import { handler } from "./_lib/http.js";
-import { askJSON, httpError } from "./_lib/claude.js";
-import { TERMS } from "./_lib/style.js";
+import { handler } from "../_lib/http.js";
+import { askJSON, httpError } from "../_lib/claude.js";
+import { TERMS } from "../_lib/style.js";
 import { CATEGORIES } from "./tag.js";
 
 export default handler(async ({ image }) => {
