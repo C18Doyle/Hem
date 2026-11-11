@@ -1,0 +1,68 @@
+{
+  "rewrites": [
+    {
+      "source": "/((?!api/).*)",
+      "destination": "/index.html"
+    }
+  ],
+  "crons": [
+    {
+      "path": "/api/cron/prices",
+      "schedule": "0 7 * * *"
+    },
+    {
+      "path": "/api/cron/prices?mode=collect",
+      "schedule": "0 9 * * *"
+    }
+  ],
+  "functions": {
+    "api/search.js": {
+      "maxDuration": 60
+    },
+    "api/cron/prices.js": {
+      "maxDuration": 300
+    },
+    "api/quality.js": {
+      "maxDuration": 60
+    },
+    "api/outfits.js": {
+      "maxDuration": 60
+    },
+    "api/today.js": {
+      "maxDuration": 60
+    },
+    "api/precheck.js": {
+      "maxDuration": 60
+    },
+    "api/wishlist-check.js": {
+      "maxDuration": 60
+    },
+    "api/suggest.js": {
+      "maxDuration": 60
+    },
+    "api/news.js": {
+      "maxDuration": 30
+    },
+    "api/brand.js": {
+      "maxDuration": 120
+    },
+    "api/rescue.js": {
+      "maxDuration": 60
+    },
+    "api/pairings.js": {
+      "maxDuration": 60
+    },
+    "api/detect.js": {
+      "maxDuration": 60
+    },
+    "api/tag.js": {
+      "maxDuration": 30
+    },
+    "api/rrp.js": {
+      "maxDuration": 30
+    },
+    "api/review.js": {
+      "maxDuration": 60
+    }
+  }
+}
