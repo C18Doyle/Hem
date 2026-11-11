@@ -5,6 +5,7 @@ import { supabase } from "../supabase.js";
 import { post } from "../api.js";
 import { useStore } from "../store.jsx";
 import { useUi } from "../components/UiProvider.jsx";
+import { shrink } from "../lib/image.js";
 import { PhotoPick, Seg, Status } from "../components/Ui.jsx";
 import { gbp } from "../lib/quality.js";
 import { GARMENT_FIELDS, GROUP, fitCheck, target } from "../lib/fit.js";
@@ -20,7 +21,7 @@ export default function Shop() {
     if (!params.get("shared") || !("caches" in window)) return;
     caches.open("hem-share").then(async c => {
       const t = await c.match("/shared-text"); if (t) { const s = (await t.text()).trim(); if (s) setDesc(s.slice(0, 200)); }
-      const i = await c.match("/shared-image"); if (i) { const { shrink } = await import("../lib/image.js"); setImg(await shrink(await i.blob(), 1100)); }
+      const i = await c.match("/shared-image"); if (i) { setImg(await shrink(await i.blob(), 1100)); }
       await caches.delete("hem-share");
     });
   }, []);

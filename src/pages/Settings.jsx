@@ -8,7 +8,7 @@ import { Seg, Status } from "../components/Ui.jsx";
 import { useUi } from "../components/UiProvider.jsx";
 import { pref } from "../lib/prefs.js";
 
-const NAMES = { tag: "Tagging", detect: "Batch detection", quality: "Quality", outfits: "Outfits", today: "Today", search: "Price search", precheck: "Before you buy", "wishlist-check": "Wishlist checks", "cron/prices": "Daily price checks", "batch/wishlist": "Overnight price checks (half price)", rrp: "Cost-new estimates", detect: "Batch detection", brand: "Brand research", suggest: "Wardrobe gaps", pairings: "Goes with", rescue: "Alteration rescue", review: "Year in review" };
+const NAMES = { tag: "Tagging", detect: "Batch detection", quality: "Quality", outfits: "Outfits", today: "Today", search: "Price search", precheck: "Before you buy", "wishlist-check": "Wishlist checks", "cron/prices": "Daily price checks", "batch/wishlist": "Overnight price checks (half price)", rrp: "Cost-new estimates", brand: "Brand research", suggest: "Wardrobe gaps", pairings: "Goes with", rescue: "Alteration rescue", review: "Year in review" };
 
 export default function Settings() {
   const { user, refresh } = useStore();
